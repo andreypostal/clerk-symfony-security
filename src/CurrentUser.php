@@ -6,7 +6,7 @@ use Andrey\Clerk\Value\Membership;
 use Andrey\Clerk\Value\User;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-readonly class CurrentUser implements UserInterface
+class CurrentUser implements UserInterface
 {
     public function __construct(
         public User $user,
@@ -24,7 +24,6 @@ readonly class CurrentUser implements UserInterface
 
     public function eraseCredentials(): void
     {
-        throw new \Exception('not implemented');
     }
 
     public function getUserIdentifier(): string

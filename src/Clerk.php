@@ -8,7 +8,6 @@ use Andrey\JsonHandler\JsonHydrator;
 use JsonException;
 use ReflectionException;
 use RuntimeException;
-use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
@@ -16,7 +15,6 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-#[Autoconfigure(autowire: true)]
 class Clerk implements ClerkInterface
 {
     private const string GetUserEndpoint = '/v1/users/%s';
