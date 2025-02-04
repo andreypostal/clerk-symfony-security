@@ -66,14 +66,15 @@ class ClerkAuthenticator extends JWTAuthenticator
             throw new InvalidTokenException('Invalid JWT Token', 0, $e);
         }
 
-        $idClaim = $this->getJwtManager()->getUserIdClaim();
-        if (!isset($payload[$idClaim])) {
-            throw new InvalidPayloadException($idClaim);
+        if (!isset($payload['userId'], $payload['orgId'])) {
+            throw new InvalidPayloadException('userId and orgId');
         }
+
+        $identifier = $payload['userId'] . '+' . $payload['orgId'];
 
         $passport = new SelfValidatingPassport(
             new UserBadge(
-                (string)$payload[$idClaim],
+                $identifier,
                 fn($userIdentifier) => $this->loadUser($payload, $userIdentifier)
             )
         );
