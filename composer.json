@@ -1,0 +1,21 @@
+{
+    "name": "andreypostal/clerk-symfony-security",
+    "description": "Symfony Security compatible package using Clerk service",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Andreypostal\\Clerk\\": "src/",
+            "Clerk\\Backend\\": "libs/clerk-sdk-php/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andrey Postal",
+            "email": "andrey@consiens.com"
+        }
+    ],
+    "require": {
+        "symfony/security-bundle": "^7.2"
+    }
+}
