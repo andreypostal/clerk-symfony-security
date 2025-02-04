@@ -2,11 +2,13 @@
 
 namespace Andrey\Clerk;
 
+use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
-readonly class UserProvider implements UserProviderInterface
+#[Autoconfigure(autowire: true)]
+class UserProvider implements UserProviderInterface
 {
     public const string IdSeparator = '+';
 
