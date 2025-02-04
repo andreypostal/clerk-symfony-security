@@ -15,14 +15,23 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-readonly class Clerk implements ClerkInterface
+class Clerk implements ClerkInterface
 {
     private const string GetUserEndpoint = '/v1/users/%s';
     private const string GetMembershipsEndpoint = '/v1/users/%s/organization_memberships';
 
     public function __construct(
         private HttpClientInterface $client,
+        ?string $serverUri = null,
+        ?string $secret = null,
     ) {
+        if ($serverUri !== null) {
+            $this->client = $this->withServer($serverUri)->client;
+        }
+
+        if ($secret !== null) {
+            $this->client = $this->withSecret($secret)->client;
+        }
     }
 
     public function withServer(string $serverUri): static
