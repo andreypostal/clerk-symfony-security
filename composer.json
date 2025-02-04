@@ -18,6 +18,7 @@
     "symfony/security-bundle": "^7.2",
     "andreypostal/json-handler-php": "v2.0.0-beta",
     "symfony/http-client": "^7.2",
-    "web-token/jwt-framework": "^4.0"
+    "web-token/jwt-framework": "^4.0",
+    "lexik/jwt-authentication-bundle": "^3.1"
   }
 }
