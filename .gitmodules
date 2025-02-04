@@ -1,3 +1,0 @@
-[submodule "libs/clerk-sdk-php"]
-	path = libs/clerk-sdk-php
-	url = https://github.com/clerk/clerk-sdk-php

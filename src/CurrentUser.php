@@ -1,15 +1,16 @@
 <?php
 
-namespace Andreypostal\Clerk;
+namespace Andrey\Clerk;
 
-use Clerk\Backend\Models\Components as Clerk;
+use Andrey\Clerk\Value\Membership;
+use Andrey\Clerk\Value\User;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-readonly class User implements UserInterface
+readonly class CurrentUser implements UserInterface
 {
     public function __construct(
-        private Clerk\User $data,
-        private Clerk\OrganizationMembership $member,
+        public User $user,
+        public Membership $membership,
     ) {
     }
 
@@ -17,16 +18,17 @@ readonly class User implements UserInterface
     {
         return [
             'user:authenticated',
-            $this->member->role,
+            $this->membership->role,
         ];
     }
 
     public function eraseCredentials(): void
     {
+        throw new \Exception('not implemented');
     }
 
     public function getUserIdentifier(): string
     {
-        return $this->data->id;
+        return $this->user->id;
     }
 }

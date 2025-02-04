@@ -1,13 +1,13 @@
 <?php
 
-namespace Andreypostal\Clerk;
+namespace Andrey\Clerk;
 
-use Clerk\Backend\Clients;
-use Clerk\Backend\Users;
+use Andrey\Clerk\Value\Membership;
+use Andrey\Clerk\Value\User;
 
 interface ClerkInterface
 {
-    public function clients(): Clients;
+    public function getUser(string $userId): User;
 
-    public function users(): Users;
+    public function getMembership(string $userId, string $orgId): Membership;
 }
