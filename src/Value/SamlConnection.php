@@ -2,20 +2,20 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class SamlConnection
+#[ValueObject]
+readonly class SamlConnection
 {
-    public ?string $id;
-    public ?string $name;
-    public ?string $domain;
-    public ?bool $active;
-    public ?string $provider;
-    public ?bool $syncUserAttributes;
-    public ?bool $allowSubdomains;
-    public ?bool $allowIdpInitiated;
-    public ?bool $disableAdditionalIdentifications;
-    public ?int $createdAt;
-    public ?int $updatedAt;
+    public string $id;
+    public string $name;
+    public string $domain;
+    public bool $active;
+    public string $provider;
+    public bool $syncUserAttributes;
+    public bool $allowSubdomains;
+    public bool $allowIdpInitiated;
+    public bool $disableAdditionalIdentifications;
+    public int $createdAt;
+    public int $updatedAt;
 }

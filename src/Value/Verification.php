@@ -2,13 +2,13 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class Verification
+#[ValueObject]
+readonly class Verification
 {
-    public ?string $status;
-    public ?string $strategy;
-    public ?int $attempts;
-    public ?int $expireAt;
+    public string $status;
+    public string $strategy;
+    public int $attempts;
+    public int $expireAt;
 }

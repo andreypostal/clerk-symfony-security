@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4ef07d116213ca6586a0cc8acbb2e11",
+    "content-hash": "d90b7a592e548e3a082215c8b8afe52d",
     "packages": [
         {
-            "name": "andreypostal/json-handler-php",
-            "version": "v2.0.0-beta",
+            "name": "andreypostal/php-pancake-object",
+            "version": "v0.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/andreypostal/json-handler-php.git",
-                "reference": "dac530a6fc567607cc2475c0230d4afaf55af8ca"
+                "url": "https://github.com/andreypostal/php-pancake-object.git",
+                "reference": "7477dac7af06fded3bb75f6ba726515fbbb88bd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreypostal/json-handler-php/zipball/dac530a6fc567607cc2475c0230d4afaf55af8ca",
-                "reference": "dac530a6fc567607cc2475c0230d4afaf55af8ca",
+                "url": "https://api.github.com/repos/andreypostal/php-pancake-object/zipball/7477dac7af06fded3bb75f6ba726515fbbb88bd0",
+                "reference": "7477dac7af06fded3bb75f6ba726515fbbb88bd0",
                 "shasum": ""
             },
             "require-dev": {
@@ -26,7 +26,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Andrey\\JsonHandler\\": "src/"
+                    "Andrey\\PancakeObject\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -39,77 +39,18 @@
                     "email": "andreypostal@gmail.com"
                 }
             ],
-            "description": "Just a light and simple JSON helper that will make it easy for you to deal with json and objects",
+            "description": "Light and simple helper to work with value objects by providing a serializer and hydrator using PHP Attributes.",
             "keywords": [
-                "json",
+                "hydrator",
+                "parser",
                 "serializer",
                 "value-objects"
             ],
             "support": {
-                "issues": "https://github.com/andreypostal/json-handler-php/issues",
-                "source": "https://github.com/andreypostal/json-handler-php/tree/v2.0.0-beta"
+                "issues": "https://github.com/andreypostal/php-pancake-object/issues",
+                "source": "https://github.com/andreypostal/php-pancake-object/tree/v0.0.2"
             },
-            "time": "2025-02-04T16:44:51+00:00"
-        },
-        {
-            "name": "brick/math",
-            "version": "0.12.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brick/math.git",
-                "reference": "f510c0a40911935b77b86859eb5223d58d660df1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/f510c0a40911935b77b86859eb5223d58d660df1",
-                "reference": "f510c0a40911935b77b86859eb5223d58d660df1",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.2",
-                "phpunit/phpunit": "^10.1",
-                "vimeo/psalm": "5.16.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Brick\\Math\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Arbitrary-precision arithmetic library",
-            "keywords": [
-                "Arbitrary-precision",
-                "BigInteger",
-                "BigRational",
-                "arithmetic",
-                "bigdecimal",
-                "bignum",
-                "bignumber",
-                "brick",
-                "decimal",
-                "integer",
-                "math",
-                "mathematics",
-                "rational"
-            ],
-            "support": {
-                "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.12.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/BenMorel",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-11-29T23:19:16+00:00"
+            "time": "2025-03-30T08:21:02+00:00"
         },
         {
             "name": "lcobucci/clock",
@@ -566,115 +507,6 @@
             "time": "2024-09-11T13:17:53+00:00"
         },
         {
-            "name": "spomky-labs/pki-framework",
-            "version": "1.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Spomky-Labs/pki-framework.git",
-                "reference": "5ac374c3e295c8b917208ff41b4d30f76668478c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/pki-framework/zipball/5ac374c3e295c8b917208ff41b4d30f76668478c",
-                "reference": "5ac374c3e295c8b917208ff41b4d30f76668478c",
-                "shasum": ""
-            },
-            "require": {
-                "brick/math": "^0.10|^0.11|^0.12",
-                "ext-mbstring": "*",
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "ekino/phpstan-banned-code": "^1.0|^2.0|^3.0",
-                "ext-gmp": "*",
-                "ext-openssl": "*",
-                "infection/infection": "^0.28|^0.29",
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpstan/extension-installer": "^1.3|^2.0",
-                "phpstan/phpstan": "^1.8|^2.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0|^2.0",
-                "phpstan/phpstan-phpunit": "^1.1|^2.0",
-                "phpstan/phpstan-strict-rules": "^1.3|^2.0",
-                "phpunit/phpunit": "^10.1|^11.0",
-                "rector/rector": "^1.0|^2.0",
-                "roave/security-advisories": "dev-latest",
-                "symfony/string": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0",
-                "symplify/easy-coding-standard": "^12.0"
-            },
-            "suggest": {
-                "ext-bcmath": "For better performance (or GMP)",
-                "ext-gmp": "For better performance (or BCMath)",
-                "ext-openssl": "For OpenSSL based cyphering"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SpomkyLabs\\Pki\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Joni Eskelinen",
-                    "email": "jonieske@gmail.com",
-                    "role": "Original developer"
-                },
-                {
-                    "name": "Florent Morselli",
-                    "email": "florent.morselli@spomky-labs.com",
-                    "role": "Spomky-Labs PKI Framework developer"
-                }
-            ],
-            "description": "A PHP framework for managing Public Key Infrastructures. It comprises X.509 public key certificates, attribute certificates, certification requests and certification path validation.",
-            "homepage": "https://github.com/spomky-labs/pki-framework",
-            "keywords": [
-                "DER",
-                "Private Key",
-                "ac",
-                "algorithm identifier",
-                "asn.1",
-                "asn1",
-                "attribute certificate",
-                "certificate",
-                "certification request",
-                "cryptography",
-                "csr",
-                "decrypt",
-                "ec",
-                "encrypt",
-                "pem",
-                "pkcs",
-                "public key",
-                "rsa",
-                "sign",
-                "signature",
-                "verify",
-                "x.509",
-                "x.690",
-                "x509",
-                "x690"
-            ],
-            "support": {
-                "issues": "https://github.com/Spomky-Labs/pki-framework/issues",
-                "source": "https://github.com/Spomky-Labs/pki-framework/tree/1.2.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Spomky",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/FlorentMorselli",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2025-01-03T09:35:48+00:00"
-        },
-        {
             "name": "symfony/clock",
             "version": "v7.2.0",
             "source": {
@@ -822,99 +654,6 @@
                 }
             ],
             "time": "2025-01-22T12:07:01+00:00"
-        },
-        {
-            "name": "symfony/console",
-            "version": "v7.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/polyfill-mbstring": "~1.0",
-                "symfony/service-contracts": "^2.5|^3",
-                "symfony/string": "^6.4|^7.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<6.4",
-                "symfony/dotenv": "<6.4",
-                "symfony/event-dispatcher": "<6.4",
-                "symfony/lock": "<6.4",
-                "symfony/process": "<6.4"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0|2.0|3.0"
-            },
-            "require-dev": {
-                "psr/log": "^1|^2|^3",
-                "symfony/config": "^6.4|^7.0",
-                "symfony/dependency-injection": "^6.4|^7.0",
-                "symfony/event-dispatcher": "^6.4|^7.0",
-                "symfony/http-foundation": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/lock": "^6.4|^7.0",
-                "symfony/messenger": "^6.4|^7.0",
-                "symfony/process": "^6.4|^7.0",
-                "symfony/stopwatch": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Eases the creation of beautiful and testable command line interfaces",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "cli",
-                "command-line",
-                "console",
-                "terminal"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/console/tree/v7.2.1"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-12-11T03:49:26+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -3184,153 +2923,15 @@
                 }
             ],
             "time": "2024-10-18T07:58:17+00:00"
-        },
-        {
-            "name": "web-token/jwt-framework",
-            "version": "4.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/web-token/jwt-framework.git",
-                "reference": "cfd4ca93bde3c1bc697b70e66360f00fc8674c7c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/web-token/jwt-framework/zipball/cfd4ca93bde3c1bc697b70e66360f00fc8674c7c",
-                "reference": "cfd4ca93bde3c1bc697b70e66360f00fc8674c7c",
-                "shasum": ""
-            },
-            "require": {
-                "brick/math": "^0.12",
-                "ext-json": "*",
-                "ext-openssl": "*",
-                "php": ">=8.2",
-                "psr/clock": "^1.0",
-                "psr/event-dispatcher": "^1.0",
-                "spomky-labs/pki-framework": "^1.2.1",
-                "symfony/config": "^7.0",
-                "symfony/console": "^7.0",
-                "symfony/dependency-injection": "^7.0",
-                "symfony/event-dispatcher": "^7.0",
-                "symfony/http-client-contracts": "^3.4",
-                "symfony/http-kernel": "^7.0"
-            },
-            "conflict": {
-                "spomky-labs/jose": "*"
-            },
-            "replace": {
-                "web-token/jwt-bundle": "self.version",
-                "web-token/jwt-experimental": "self.version",
-                "web-token/jwt-library": "self.version"
-            },
-            "require-dev": {
-                "ekino/phpstan-banned-code": "^2.0|^3.0",
-                "ergebnis/phpunit-slow-test-detector": "^2.14",
-                "ext-curl": "*",
-                "ext-gmp": "*",
-                "ext-sodium": "*",
-                "infection/infection": "^0.29",
-                "matthiasnoback/symfony-config-test": "5.1.x-dev",
-                "paragonie/sodium_compat": "^1.20|^2.0",
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpbench/phpbench": "^1.2",
-                "phpstan/extension-installer": "^1.3|^2.0",
-                "phpstan/phpstan": "^1.8|^2.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0|^2.0",
-                "phpstan/phpstan-doctrine": "^1.3|^2.0",
-                "phpstan/phpstan-phpunit": "^1.1|^2.0",
-                "phpstan/phpstan-strict-rules": "^1.4|^2.0",
-                "phpstan/phpstan-symfony": "^1.3|^2.0",
-                "phpunit/phpunit": "^10.5.10|^11.0",
-                "qossmic/deptrac": "^2.0",
-                "rector/rector": "^1.0|^2.0",
-                "roave/security-advisories": "dev-latest",
-                "spomky-labs/aes-key-wrap": "^7.0",
-                "staabm/phpstan-dba": "^0.2.79|^0.3",
-                "staabm/phpstan-todo-by": "^0.1.25|^0.2",
-                "struggle-for-php/sfp-phpstan-psr-log": "^0.20|^0.21|^0.22|^0.23",
-                "symfony/browser-kit": "^7.0",
-                "symfony/clock": "^7.0",
-                "symfony/finder": "^7.0",
-                "symfony/framework-bundle": "^7.0",
-                "symfony/http-client": "^7.0",
-                "symfony/serializer": "^7.0",
-                "symfony/var-dumper": "^7.0",
-                "symfony/yaml": "^7.0",
-                "symplify/easy-coding-standard": "^12.0"
-            },
-            "suggest": {
-                "spomky-labs/aes-key-wrap": "To enable AES Key Wrap algorithm.",
-                "symfony/serializer": "Use the Symfony serializer to serialize/unserialize JWS and JWE tokens.",
-                "symfony/var-dumper": "Used to show data on the debug toolbar."
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-4": {
-                    "Jose\\Component\\": "src/Library/",
-                    "Jose\\Experimental\\": "src/Experimental/",
-                    "Jose\\Bundle\\JoseFramework\\": "src/Bundle/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Florent Morselli",
-                    "homepage": "https://github.com/Spomky"
-                },
-                {
-                    "name": "All contributors",
-                    "homepage": "https://github.com/web-token/jwt-bundle/contributors"
-                }
-            ],
-            "description": "JSON Object Signing and Encryption library for PHP and Symfony Bundle.",
-            "homepage": "https://github.com/web-token/jwt-framework",
-            "keywords": [
-                "JOSE",
-                "JWE",
-                "JWK",
-                "JWKSet",
-                "JWS",
-                "Jot",
-                "RFC7515",
-                "RFC7516",
-                "RFC7517",
-                "RFC7518",
-                "RFC7519",
-                "RFC7520",
-                "bundle",
-                "jwa",
-                "jwt",
-                "symfony"
-            ],
-            "support": {
-                "issues": "https://github.com/web-token/jwt-framework/issues",
-                "source": "https://github.com/web-token/jwt-framework/tree/4.0.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Spomky",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/FlorentMorselli",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2025-01-03T17:50:45+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "andreypostal/json-handler-php": 10
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

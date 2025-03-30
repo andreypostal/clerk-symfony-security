@@ -11,7 +11,7 @@ class UserProvider implements UserProviderInterface
     public const string IdSeparator = '+';
 
     public function __construct(
-        private ClerkInterface $clerk
+        private readonly ClerkInterface $clerk
     ) {
     }
 

@@ -2,24 +2,24 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonItemAttribute;
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\Item;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class PhoneNumbers
+#[ValueObject]
+readonly class PhoneNumbers
 {
-    public ?string $id;
-    public ?string $object;
-    public ?string $phoneNumber;
-    public ?bool $reservedForSecondFactor;
-    public ?bool $defaultSecondFactor;
-    public ?bool $reserved;
-    public ?Verification $verification;
+    public string $id;
+    public string $object;
+    public string $phoneNumber;
+    public bool $reservedForSecondFactor;
+    public bool $defaultSecondFactor;
+    public bool $reserved;
+    public Verification $verification;
     /* @param LinkedTo[] $linkedTo */
-    #[JsonItemAttribute(type: LinkedTo::class)]
-    public ?array $linkedTo;
+    #[Item(type: LinkedTo::class)]
+    public array $linkedTo;
     /* @param string[] $backupCodes */
-    public ?array $backupCodes;
-    public ?int $createdAt;
-    public ?int $updatedAt;
+    public array $backupCodes;
+    public int $createdAt;
+    public int $updatedAt;
 }

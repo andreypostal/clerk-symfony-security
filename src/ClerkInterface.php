@@ -10,6 +10,5 @@ use Symfony\Component\DependencyInjection\Attribute\AsAlias;
 interface ClerkInterface
 {
     public function getUser(string $userId): User;
-
     public function getMembership(string $userId, string $orgId): Membership;
 }

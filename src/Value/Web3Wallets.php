@@ -2,15 +2,15 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class Web3Wallets
+#[ValueObject]
+readonly class Web3Wallets
 {
-    public ?string $id;
-    public ?string $object;
-    public ?string $web3Wallet;
-    public ?Verification $verification;
-    public ?int $createdAt;
-    public ?int $updatedAt;
+    public string $id;
+    public string $object;
+    public string $web3Wallet;
+    public Verification $verification;
+    public int $createdAt;
+    public int $updatedAt;
 }

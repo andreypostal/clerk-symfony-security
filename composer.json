@@ -16,8 +16,8 @@
   ],
   "require": {
     "symfony/security-bundle": "^7.2",
-    "andreypostal/json-handler-php": "v2.0.0-beta",
     "symfony/http-client": "^7.2",
-    "lexik/jwt-authentication-bundle": "^3.1"
+    "lexik/jwt-authentication-bundle": "^3.1",
+    "andreypostal/php-pancake-object": "^0.0.2"
   }
 }

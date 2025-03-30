@@ -2,14 +2,14 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class Passkeys
+#[ValueObject]
+readonly class Passkeys
 {
-    public ?string $id;
-    public ?string $object;
-    public ?string $name;
-    public ?int $lastUsedAt;
-    public ?Verification $verification;
+    public string $id;
+    public string $object;
+    public string $name;
+    public int $lastUsedAt;
+    public Verification $verification;
 }

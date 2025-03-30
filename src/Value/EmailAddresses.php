@@ -2,21 +2,21 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonItemAttribute;
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\Item;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class EmailAddresses
+#[ValueObject]
+readonly class EmailAddresses
 {
-    public ?string $id;
-    public ?string $object;
-    public ?string $emailAddress;
-    public ?bool $reserved;
-    public ?Verification $verification;
+    public string $id;
+    public string $object;
+    public string $emailAddress;
+    public bool $reserved;
+    public Verification $verification;
     /* @param LinkedTo[] $linkedTo */
-    #[JsonItemAttribute(type: LinkedTo::class)]
-    public ?array $linkedTo;
-    public ?bool $matchesSsoConnection;
-    public ?int $createdAt;
-    public ?int $updatedAt;
+    #[Item(type: LinkedTo::class)]
+    public array $linkedTo;
+    public bool $matchesSsoConnection;
+    public int $createdAt;
+    public int $updatedAt;
 }

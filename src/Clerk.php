@@ -5,6 +5,7 @@ namespace Andrey\Clerk;
 use Andrey\Clerk\Value\Membership;
 use Andrey\Clerk\Value\User;
 use Andrey\JsonHandler\JsonHydrator;
+use Andrey\PancakeObject\SimpleHydrator;
 use JsonException;
 use ReflectionException;
 use RuntimeException;
@@ -54,7 +55,6 @@ class Clerk implements ClerkInterface
      * @throws RedirectionExceptionInterface
      * @throws ServerExceptionInterface
      * @throws TransportExceptionInterface
-     * @throws JsonException
      * @throws ReflectionException
      */
     public function getUser(string $userId): User
@@ -62,7 +62,7 @@ class Clerk implements ClerkInterface
         $response = $this->client->request('GET', sprintf(self::GetUserEndpoint, $userId));
         $userObject = $response->toArray();
 
-        $hydrator = new JsonHydrator();
+        $hydrator = new SimpleHydrator();
         /** @var User $user */
         $user = $hydrator->hydrate($userObject, User::class);
         return $user;
@@ -71,7 +71,6 @@ class Clerk implements ClerkInterface
     /**
      * @throws ClientExceptionInterface
      * @throws DecodingExceptionInterface
-     * @throws JsonException
      * @throws RedirectionExceptionInterface
      * @throws ReflectionException
      * @throws ServerExceptionInterface
@@ -82,8 +81,7 @@ class Clerk implements ClerkInterface
         $response = $this->client->request('GET', sprintf(self::GetMembershipsEndpoint, $userId));
         $membershipsArray = $response->toArray();
 
-        $hydrator = new JsonHydrator();
-
+        $hydrator = new SimpleHydrator();
         foreach ($membershipsArray['data'] ?? [] as $membershipArray) {
             /** @var Membership $membership */
             $membership = $hydrator->hydrate($membershipArray, Membership::class);

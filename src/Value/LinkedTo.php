@@ -2,11 +2,11 @@
 
 namespace Andrey\Clerk\Value;
 
-use Andrey\JsonHandler\Attributes\JsonObjectAttribute;
+use Andrey\PancakeObject\Attributes\ValueObject;
 
-#[JsonObjectAttribute]
-class LinkedTo
+#[ValueObject]
+readonly class LinkedTo
 {
-    public ?string $id;
-    public ?string $type;
+    public string $id;
+    public string $type;
 }
