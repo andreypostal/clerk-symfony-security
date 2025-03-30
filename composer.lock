@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d90b7a592e548e3a082215c8b8afe52d",
+    "content-hash": "015a9402dc47abb457bdc64ba2695797",
     "packages": [
         {
             "name": "andreypostal/php-pancake-object",
-            "version": "v0.0.2",
+            "version": "v0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreypostal/php-pancake-object.git",
-                "reference": "7477dac7af06fded3bb75f6ba726515fbbb88bd0"
+                "reference": "996c8bc54d5ad69a3aad80dac2f14e04e7eb1fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreypostal/php-pancake-object/zipball/7477dac7af06fded3bb75f6ba726515fbbb88bd0",
-                "reference": "7477dac7af06fded3bb75f6ba726515fbbb88bd0",
+                "url": "https://api.github.com/repos/andreypostal/php-pancake-object/zipball/996c8bc54d5ad69a3aad80dac2f14e04e7eb1fab",
+                "reference": "996c8bc54d5ad69a3aad80dac2f14e04e7eb1fab",
                 "shasum": ""
             },
             "require-dev": {
@@ -48,9 +48,9 @@
             ],
             "support": {
                 "issues": "https://github.com/andreypostal/php-pancake-object/issues",
-                "source": "https://github.com/andreypostal/php-pancake-object/tree/v0.0.2"
+                "source": "https://github.com/andreypostal/php-pancake-object/tree/v0.0.3"
             },
-            "time": "2025-03-30T08:21:02+00:00"
+            "time": "2025-03-30T09:16:39+00:00"
         },
         {
             "name": "lcobucci/clock",
